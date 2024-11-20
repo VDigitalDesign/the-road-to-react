@@ -1,3 +1,4 @@
 export default function Page() {
-    return <h2>Hello Page</h2>
+    const Title = "Hello Page";
+    return <h2>{Title}</h2>
 }
