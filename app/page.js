@@ -2,16 +2,20 @@
 
 import {useState} from "react";
 
-const Heading = ({title, description}) => {
+const Heading = ({title, description, children}) => {
     const myStyling = {
         padding: '16px',
         fontWeight: 'bold',
     }
     return (
-        <div style={myStyling}>
-            <h2>{title}</h2>
-            <span>{description}</span>
+        <div>
+            <div style={myStyling}>
+                <h2>{title}</h2>
+                <span>{description}</span>
+            </div>
+            {children}
         </div>
+
     )
 }
 
@@ -27,9 +31,11 @@ export default function Page() {
 
     return (
         <div>
-            <Heading title={myTitle} description={myDescription} />
+            <Heading title={myTitle} description={myDescription}>
+                <button onClick={handleUpvote}>Upvote ({upvote})</button>
+            </Heading>
             <p>Some content ...</p>
-            <button onClick={handleUpvote}>Upvote ({upvote})</button>
+
         </div>
-    );
+);
 }
