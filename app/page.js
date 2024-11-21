@@ -1,6 +1,10 @@
 const Heading = ({title, description}) => {
+    const myStyling = {
+        padding: '16px',
+        fontWeight: 'bold',
+    }
     return (
-        <div>
+        <div style={myStyling}>
             <h2>{title}</h2>
             <span>{description}</span>
         </div>
