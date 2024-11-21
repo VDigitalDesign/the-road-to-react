@@ -1,23 +1,8 @@
 "use client";
 
 import {useState} from "react";
+import {Heading} from "./heading";
 
-const Heading = ({title, description, children}) => {
-    const myStyling = {
-        padding: '16px',
-        fontWeight: 'bold',
-    }
-    return (
-        <div>
-            <div style={myStyling}>
-                <h2>{title}</h2>
-                <span>{description}</span>
-            </div>
-            {children}
-        </div>
-
-    )
-}
 
 export default function Page() {
     const myTitle = "Hello Page!!!";
@@ -37,5 +22,5 @@ export default function Page() {
             <p>Some content ...</p>
 
         </div>
-);
+    );
 }
